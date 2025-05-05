@@ -1,79 +1,76 @@
-/* General Styles */
+/* Base Styles */
 html {
     scroll-behavior: smooth;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0d1117;
     color: #e6edf3;
     margin: 0;
     padding: 0;
-}
-
-/* Home Page Layout */
-.homePage {
+  }
+  
+  /* Container Layouts */
+  .homePage, .cpContainer {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
-}
-
-/* Header */
-.intro {
+  }
+  
+  /* Typography & Links */
+  h1, h2, h3, h4 {
+    color: #58a6ff;
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation */
+  .intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2rem;
     border-bottom: 1px solid #30363d;
-}
-
-.intro h1 {
-    font-size: 1.8rem;
-    color: #58a6ff;
-}
-
-.intro nav a {
+  }
+  
+  .intro nav a {
     margin-left: 1.5rem;
-    color: #c9d1d9;
-    text-decoration: none;
-    font-weight: 500;
     transition: color 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.intro nav a:hover {
-    color: #58a6ff;
-}
-
-/* Hero Section */
-.hero {
+  }
+  
+  /* Hero Section */
+  .hero {
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-}
-
-.hero h2 {
+    margin: 3rem 0 4rem;
+  }
+  
+  .hero h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
+  }
+  
+  .hero p {
     font-size: 1.2rem;
     color: #8b949e;
-}
-
-/* Languages Section */
-.languages {
+  }
+  
+  /* Skills Section */
+  .languages {
     padding: 40px 20px;
     text-align: center;
-}
-
-.languages h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.skills-list {
+  }
+  
+  .skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -82,9 +79,9 @@ body {
     list-style: none;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.skills-list li {
+  }
+  
+  .skills-list li {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px 20px;
@@ -92,84 +89,65 @@ body {
     font-weight: 500;
     min-width: 150px;
     text-align: center;
-    transition: 0.2s ease-in-out;
-}
-
-.skills-list li:hover {
+    transition: 0.2s;
+  }
+  
+  .skills-list li:hover {
     background-color: #0073e6;
     color: #fff;
     cursor: default;
-}
-
-
-/* Projects Section */
-.projects {
+  }
+  
+  /* Projects */
+  .projects {
     margin-bottom: 4rem;
-}
-
-.post {
+  }
+  
+  .post {
     background-color: #161b22;
     padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
     border: 1px solid #30363d;
     display: flex;
-    flex-direction: row;
+    flex-wrap: row;
     gap: 1.5rem;
     align-items: center;
-}
+  }
 
-.post-content {
+  .post-content {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
     align-items: center;
-}
+  }
 
-.post-image {
+  .post-image {
     flex: 1;
     max-width: 200px;
-}
-
-.post-image img {
+  }
+  
+  .post-image img {
     width: 100%;
-    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     object-fit: cover;
-}
-
-.post-text {
+  }
+  
+  .post-text {
     flex: 2;
-}
-
-.post-text h4 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #58a6ff;
-}
-
-.post-text p {
+  }
+  
+  .post-text p {
     color: #8b949e;
     margin-bottom: 1rem;
-}
-
-.github-links {
-    margin-top: 1rem;
-}
-
-.github-links a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-}
-
-.github-links a:hover {
+  }
+  
+  .github-links a:hover {
     color: #c9d1d9;
-}
-
-.post button {
+  }
+  
+  .post button {
     background-color: #f85149;
     border: none;
     padding: 0.5rem 1rem;
@@ -178,192 +156,54 @@ body {
     font-weight: bold;
     cursor: pointer;
     margin-top: 1rem;
-}
-
-.post button:hover {
+  }
+  
+  .post button:hover {
     background-color: #da3633;
-}
-
-/* CV Section */
-.CV {
+  }
+  
+  /* CV Section */
+  .CV {
     text-align: center;
     margin-bottom: 4rem;
-}
-
-.CV a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.CV a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Section */
-.contact {
+  }
+  
+  .cv-buttons a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .cv-buttons a:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Contact Section */
+  .contact {
     text-align: center;
-    padding-bottom: 3rem;
+    padding: 2rem 0 3rem;
     border-top: 1px solid #30363d;
-    padding-top: 2rem;
-}
-
-.contact span {
-    color: #58a6ff;
-    cursor: pointer;
-}
-
-.contact ul {
+  }
+  
+  .contact ul {
     list-style: none;
     padding: 0;
     margin-top: 1rem;
-}
-
-.contact li {
+  }
+  
+  .contact li {
     display: inline;
     margin: 0 1rem;
-}
-
-.contact a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .post-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .post-image {
-        max-width: 100%;
-    }
-
-    .post-text {
-        text-align: center;
-    }
-
-    .post button {
-        width: 100%;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-}
-
-/* Create Post Page Styling */
-.createPostPage {
+  }
+  
+  /* Create & Login Pages */
+  .createPostPage, .loginPage {
     background-color: #0d1117;
-    padding: 3rem 2rem;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cpContainer {
-    background-color: #161b22;
-    border-radius: 12px;
-    padding: 2rem 3rem;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cpContainer h1 {
-    font-size: 2rem;
-    color: #58a6ff;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.inputGroup {
-    margin-bottom: 1.5rem;
-}
-
-.inputGroup label {
-    font-size: 1.1rem;
-    color: #c9d1d9;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.inputGroup input,
-.inputGroup textarea {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #21262d;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    color: #c9d1d9;
-    font-size: 1rem;
-}
-
-.inputGroup textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.cpContainer button {
-    width: 100%;
-    background-color: #58a6ff;
-    padding: 1rem;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cpContainer button:hover {
-    background-color: #1f8fe0;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .cpContainer {
-        padding: 1.5rem;
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .cpContainer h1 {
-        font-size: 1.6rem;
-    }
-
-    .inputGroup input,
-    .inputGroup textarea {
-        padding: 0.65rem;
-    }
-
-    .cpContainer button {
-        padding: 0.8rem;
-    }
-}
-
-/* Login Page Styles */
-.loginPage {
-    background-color: #0d1117;  
     padding: 3rem 2rem;
     min-height: 100vh;
     display: flex;
@@ -371,23 +211,26 @@ body {
     align-items: center;
     flex-direction: column;
     color: #e6edf3;
-}
-
-.loginPage h1 {
-    font-size: 2rem;
-    color: #58a6ff;
-    margin-bottom: 2rem;
-}
-
-.loginPage label {
-    font-size: 1.1rem;
-    color: #c9d1d9;
+  }
+  
+  .cpContainer, .loginPage form {
+    background-color: #161b22;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .inputGroup label, .loginPage label {
     display: block;
     margin-bottom: 0.5rem;
-}
-
-.loginPage input {
-    width: 30%;
+    font-size: 1.1rem;
+    color: #c9d1d9;
+  }
+  
+  .inputGroup input, .inputGroup textarea, .loginPage input {
+    width: 100%;
     padding: 0.75rem;
     background-color: #21262d;
     border: 1px solid #30363d;
@@ -395,11 +238,14 @@ body {
     color: #c9d1d9;
     font-size: 1rem;
     margin-bottom: 1rem;
-}
-
-.loginPage button {
-    margin-top: 2rem;
-    width: 20%;
+  }
+  
+  .inputGroup textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .cpContainer button, .loginPage button {
     background-color: #58a6ff;
     padding: 1rem;
     border: none;
@@ -408,49 +254,56 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.loginPage button:hover {
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .cpContainer button:hover, .loginPage button:hover {
     background-color: #1f8fe0;
-}
-
-.loginPage a {
-    color: #58a6ff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 2rem;
-    display: inline-block;
-}
-
-.loginPage a:hover {
-    text-decoration: underline;
-}
-
-.loginPage p[style] {
+  }
+  
+  .loginPage p[style] {
     color: red;
     font-size: 1rem;
     margin-top: 1rem;
-}
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .loginPage {
-        padding: 2rem 1.5rem;
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .loginPage h1 {
-        font-size: 1.8rem;
+    .post-content {
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .loginPage button {
-        padding: 0.8rem;
-        width: 70%;
+    .post-image {
+        width: 100%;
     }
 
-    .loginPage input {
-        padding: 0.65rem;
-        width: 70%;
+    .post-text {
+        text-align: center;
     }
-}
-
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .cpContainer, .loginPage form {
+      padding: 1.5rem;
+      max-width: 500px;
+    }
+  
+    .loginPage input, .loginPage button {
+      width: 70%;
+    }
+  }

@@ -26,7 +26,7 @@ function Home({isAuth}){
 
     return <div className="homePage">
         <div className="intro">
-            <h1>aidanhumpidge.com</h1>
+            <h1>aidan.dev</h1>
             <nav>
             <a href="#projects">Projects</a>
             <a href="#cv">CV</a>
