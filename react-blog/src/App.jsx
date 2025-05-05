@@ -15,22 +15,20 @@ function App() {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      window.location.pathname = "/login";
+      window.location.pathname = "/";
     })
   }
 
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link>
-
-        {!isAuth ? (<Link to="/login">Login</Link>) : (
+      <div>
+        {isAuth && (
           <>
             <Link to="/createpost">Create Post</Link>
             <button onClick={signUserOut}>Log Out</button>
           </>
         )}
-      </nav>
+      </div>
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth}/>}/>
         <Route path="/createpost" element={<CreatePost isAuth={isAuth}/>}/>

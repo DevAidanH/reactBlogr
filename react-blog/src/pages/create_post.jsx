@@ -7,6 +7,8 @@ function CreatePost({isAuth}){
 
     const [title, setTitle] = useState("");
     const [postText, setPostText] = useState("");
+    const [imageLink, setImageLink] = useState("");
+    const [gitLink, setGitLink] = useState("");
 
     const postsCollectionsRef = collection(db, "posts");
 
@@ -16,6 +18,8 @@ function CreatePost({isAuth}){
         await addDoc(postsCollectionsRef, {
             title, 
             postText, 
+            imageLink,
+            gitLink,
             author: {
                 name: auth.currentUser.displayName, 
                 id: auth.currentUser.uid
@@ -40,6 +44,14 @@ function CreatePost({isAuth}){
             <div className="inputGroup">
                 <label>Post</label>
                 <textarea placeholder="Post..." onChange={(event) => {setPostText(event.target.value)}}/>
+            </div>
+            <div className="inputGroup">
+                <label>Image Link</label>
+                <input placeholder="Link..." onChange={(event) => {setImageLink(event.target.value)}}/>
+            </div>
+            <div className="inputGroup">
+                <label>GitHub Link</label>
+                <input placeholder="link..." onChange={(event) => {setGitLink(event.target.value)}}/>
             </div>
             <button onClick={createPost}>Submit Post</button>
         </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import {auth, provider} from "../firebase-config"
-import {signInWithEmailAndPassword} from "firebase/auth"
+import {auth, provider} from "../firebase-config";
+import {signInWithEmailAndPassword} from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login({setIsAuth}){
 
@@ -42,13 +43,12 @@ function Login({setIsAuth}){
     
 
     return <div className="loginPage">
-        <p>Admin Log In</p>
-        <div>
-            <label>Email</label>
-            <input placeholder="Email..." onChange={(event) => {setEmail(event.target.value)}}/><br/>
-            <label>Password</label>
-            <input placeholder="Password..." type="password" onChange={(event) => {setPassword(event.target.value)}}/>
-        </div>
+        <Link to="/">Home</Link>
+        <h1>Admin Log In</h1>
+        <label>Email</label>
+        <input placeholder="Email..." onChange={(event) => {setEmail(event.target.value)}}/><br/>
+        <label>Password</label>
+        <input placeholder="Password..." type="password" onChange={(event) => {setPassword(event.target.value)}}/>
         <button onClick={signInWithEmail}>
             Log in
         </button>

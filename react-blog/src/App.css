@@ -1,24 +1,426 @@
-.App{
-    text-align: center;
+/* General Styles */
+html {
+    scroll-behavior: smooth;
 }
-body{
-    padding: 0;
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
 }
-nav{
-    background-color: black;
+
+/* Home Page Layout */
+.homePage {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header / Intro */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #30363d;
+}
+
+.intro h1 {
+    font-size: 1.8rem;
+    color: #58a6ff;
+}
+
+.intro nav a {
+    margin-left: 1.5rem;
+    color: #c9d1d9;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.intro nav a:hover {
+    color: #58a6ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #8b949e;
+}
+
+/* Projects Section */
+.projects {
+    margin-bottom: 4rem;
+}
+
+/* Post Section Styling */
+.post {
+    background-color: #161b22;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #30363d;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Post Content (flex container for image and text) */
+.post-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Left Side (Image) */
+.post-image {
+    flex: 1;
+    max-width: 200px;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Right Side (Text and GitHub Links) */
+.post-text {
+    flex: 2;
+}
+
+.post-text h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #58a6ff;
+}
+
+.post-text p {
+    color: #8b949e;
+    margin-bottom: 1rem;
+}
+
+.github-links {
+    margin-top: 1rem;
+}
+
+.github-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.github-links a:hover {
+    color: #c9d1d9;
+}
+
+.post button {
+    background-color: #f85149;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     color: white;
-    width: 100vw;
-    height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.post button:hover {
+    background-color: #da3633;
+}
+
+/* CV Section */
+.CV {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.CV a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.CV a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding-bottom: 3rem;
+    border-top: 1px solid #30363d;
+    padding-top: 2rem;
+}
+
+.contact span {
+    color: #58a6ff;
+    cursor: pointer;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.contact li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.contact a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .post-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .post-image {
+        max-width: 100%;
+    }
+
+    .post-text {
+        text-align: center;
+    }
+
+    .post button {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Create Post Page Styling */
+.createPostPage {
+    background-color: #0d1117;
+    padding: 3rem 2rem;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-a{
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 20px;
+
+/* Create Post Form Container */
+.cpContainer {
+    background-color: #161b22;
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Heading */
+.cpContainer h1 {
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Input Group Styling */
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    font-size: 1.1rem;
+    color: #c9d1d9;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Input Fields */
+.inputGroup input,
+.inputGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    font-size: 1rem;
+}
+
+.inputGroup textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Button Styling */
+.cpContainer button {
+    width: 100%;
+    background-color: #58a6ff;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cpContainer button:hover {
+    background-color: #1f8fe0;
+}
+
+/* Mobile Adjustments for Create Post Page */
+@media (max-width: 768px) {
+    .cpContainer {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .cpContainer h1 {
+        font-size: 1.6rem;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea {
+        padding: 0.65rem;
+    }
+
+    .cpContainer button {
+        padding: 0.8rem;
+    }
+}
+
+/* Login Page Styles */
+.loginPage {
+    background-color: #0d1117;  /* Dark background */
+    padding: 3rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #e6edf3;
+}
+
+.loginPage h1 {
+    font-size: 2rem;
+    color: #58a6ff;
+    margin-bottom: 2rem;
+}
+
+.loginPage label {
+    font-size: 1.1rem;
+    color: #c9d1d9;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.loginPage input {
+    width: 30%;
+    padding: 0.75rem;
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #c9d1d9;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loginPage button {
+    margin-top: 2rem;
+    width: 20%;
+    background-color: #58a6ff;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginPage button:hover {
+    background-color: #1f8fe0;
+}
+
+.loginPage a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.loginPage a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.loginPage p[style] {
+    color: red;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .loginPage {
+        padding: 2rem 1.5rem;
+    }
+
+    .loginPage h1 {
+        font-size: 1.8rem;
+    }
+
+    .loginPage button {
+        padding: 0.8rem;
+        width: 70%;
+    }
+
+    .loginPage input {
+        padding: 0.65rem;
+        width: 70%;
+    }
+}
+
