@@ -26,10 +26,10 @@ function Home({isAuth}){
 
     return <div className="homePage">
         <div className="intro">
-            <h1>aidan.dev</h1>
+            <h1>aidanhumpidge.com</h1>
             <nav>
             <a href="#projects">Projects</a>
-            <a href="#cv">About</a>
+            <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -39,6 +39,22 @@ function Home({isAuth}){
             <p>      
                 A software developer building clean, functional apps with a focus on performance and simplicity.
             </p>
+            <div className="languages">
+                <h3>What I work with</h3>
+                <ul className="skills-list">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>JavaScript</li>
+                    <li>HTML & CSS</li>
+                    <li>PhP</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Flutter & Dart</li>
+                    <li>Firebase & Google Analytics</li>
+                    <li>API Intergration</li>
+                    <li>Git</li>
+                </ul>
+            </div>
         </div>
 
         <section id="projects" className="projects">
@@ -46,7 +62,6 @@ function Home({isAuth}){
                 return (
                     <div className="post" key={post.id}>
                         <div className="post-content">
-                            {/* Image on the left */}
                             <div className="post-image">
                                 {post.imageLink ? (
                                     <img src={post.imageLink} alt={post.title} />
@@ -55,7 +70,6 @@ function Home({isAuth}){
                                 )}
                             </div>
 
-                            {/* Text and GitHub links on the right */}
                             <div className="post-text">
                                 <h4>{post.title}</h4>
                                 <p>{post.postText}</p>
@@ -78,7 +92,7 @@ function Home({isAuth}){
 
         <section id="cv" className="CV">
             <h3>Check out my CV below</h3>
-            <a href="" target="_blank">Click Here</a>
+            <a href="/cv.pdf" target="_blank">Click Here</a>
         </section>
 
         <section id="contact" className="contact">
